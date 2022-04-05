@@ -2,7 +2,7 @@
 
 sudo apt-get update && sudo apt-get install -y git curl
 
-sudo apt-get -f install
+sudo apt-get -f -y install
 
 curl https://download.virtualbox.org/virtualbox/6.1.32/virtualbox-6.1_6.1.32-149290~Ubuntu~xenial_amd64.deb --output /tmp/virtualbox.deb
 sudo dpkg -i /tmp/virtualbox.deb
