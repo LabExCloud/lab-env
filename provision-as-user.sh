@@ -6,6 +6,9 @@
 # 
 # nvm install v16.10.0
 
+mkdir -p /home/vagrant/.local/bin
+echo 'export PATH=/home/vagrant/.local/bin:$PATH' >> .bashrc
+
 NODE=node-v16.14.2-linux-x64
 
 curl https://nodejs.org/dist/v16.14.2/$NODE.tar.xz --output /tmp/$NODE.tar.xz
