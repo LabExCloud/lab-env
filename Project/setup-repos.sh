@@ -1,5 +1,10 @@
 #!/bin/bash 
 
+if [ $(whoami) != 'vagrant' ]; then
+    echo "run this script inside vagrant"
+    exit 1
+fi
+
 git clone https://github.com/LabExCloud/webapp.git
 git clone https://github.com/LabExCloud/backend.git
 

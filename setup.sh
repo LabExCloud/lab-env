@@ -1,5 +1,16 @@
 #!/bin/bash 
 
+if [ $(whoami) == 'vagrant' ]; then
+    echo "do not run this script inside vagrant"
+    exit 1
+fi
+
+if [[ -z $(apt-get) ]]; then
+    echo "run this script on debian based distro only"
+    exit 1
+fi
+
+
 sudo apt-get update && sudo apt-get install -y git curl
 
 sudo apt-get -f -y install
